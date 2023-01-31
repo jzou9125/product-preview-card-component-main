@@ -79,9 +79,13 @@ body {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .product {
+  --content-padding: 1.5rem;
+  --content-spacing: 1rem;
+
   background-color: var(--white);
   border-radius: 0.5rem;
   overflow: hidden;
@@ -89,17 +93,27 @@ body {
   flex-direction: column;
 }
 
-.product img {
-  width: 50%;
-  float: left;
+.product__content {
+  display: grid;
+  padding: var(--content-padding);
+  gap: var(--content-spacing);
 }
 
-.price span {
+.product__type {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.product__name {
+  font-size: 2rem;
   font-family: var(--ff-accent);
+  color: var(--very-dark-blue);
 }
 
-.btn img {
-  width: 10%;
+.final__price {
+  font-size: 2rem;
+  font-family: var(--ff-accent);
+  color: var(--dark-cyan);
 }
 
 .attribution {
