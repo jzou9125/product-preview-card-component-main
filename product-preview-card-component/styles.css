@@ -100,8 +100,13 @@ body {
   background-color: var(--white);
   border-radius: 0.5rem;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+}
+
+@media (min-width: 600px) {
+  .product {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
 .product__content {
@@ -142,6 +147,13 @@ body {
   color: var(--white);
   font-weight: var(--fw-bold);
   font-size: 0.925rem;
+}
+
+.btn[data-icon="shopping-cart"]::before {
+  content: "";
+  background-image: url("images/icon-cart.svg");
+  width: 15px;
+  height: 16px;
 }
 
 .btn:is(:hover, :focus) {
